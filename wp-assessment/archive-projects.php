@@ -2,10 +2,10 @@
 
 
 
-<div class="container mt-5">
+<div class="container mt-5 quick-container">
     <div class="row">
         <!-- Search Filter Column -->
-        <div class="col-md-4">
+        <div class="col-lg-4 col-md-12 btn-col">
             <h2>Filter Projects</h2>
             <form id="project-filter" method="GET" action="<?php echo esc_url(home_url('/projects')); ?>">
                 <div class="mb-3">
@@ -21,9 +21,9 @@
         </div>
 
         <!-- Projects Column -->
-        <div class="col-md-8">
+        <div class="col-lg-8 col-md-12 quick-col">
             <h2>Projects</h2>
-            <div class="row">
+            <div class="row imgages-card">
                 <?php
                 // Query arguments
                 $args = array(
@@ -53,11 +53,11 @@
 
                 if ($projects->have_posts()) :
                     while ($projects->have_posts()) : $projects->the_post(); ?>
-                        <div class="col-md-6 col-lg-4 mb-4">
+                        <div class="col-xl-4 col-lg-6 col-md-12 mb-4">
                             <div class="card">
                                 <a href="<?php the_permalink(); ?>">
                                     <?php if (has_post_thumbnail()) : ?>
-                                        <?php the_post_thumbnail('medium', ['class' => 'card-img-top']); ?>
+                                        <?php the_post_thumbnail('medium', ['class' => 'imgtop card-img-top']); ?>
                                     <?php endif; ?>
                                     <div class="card-body">
                                         <h5 class="card-title"><?php the_title(); ?></h5>

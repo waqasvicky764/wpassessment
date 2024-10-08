@@ -8,8 +8,6 @@ body {
     background-color: #f4f4f4;
 }
 
-
-
 header {
     background: #50b3a2;
     color: #ffffff;
@@ -21,8 +19,11 @@ header {
 header a {
     color: #ffffff;
     text-decoration: none;
-    text-transform: uppercase;
-    font-size: 16px;
+    text-transform: capitalize;
+    font-size: 17px;
+}
+header a:active {
+    color: #50b3a2;
 }
 
 footer {
@@ -31,6 +32,10 @@ footer {
     text-align: center;
     padding: 20px;
     margin-top: 20px;
+}
+.quick-footer.container p {
+    margin: top 0px;
+    margin-bottom: 0px;
 }
 
 .navbar-nav .dropdown-menu {
@@ -49,5 +54,94 @@ footer {
 .defualt-content {
     padding: 60px 0px;
 }
+
+.navbar-collapse #menu-primary-menu li.active a {
+color:#50b3a2
+}
+.navbar-collapse #menu-primary-menu li a:hover {
+    color:#50b3a2
+}
+
+.quick-container .row .col-md-6 .card-title:hover {
+    color: #50b3a2;
+}
+
+.quick-container .row .col-md-6 a{
+    text-decoration: none;
+}
+
+.quick-container .row .col-md-6 .card-title {
+    color: #333333;
+}
+
+.quick-container .row .card img.card-img-top {
+    padding: 20px;
+}
+
+.btn-col button.btn.btn-primary {
+    color: #fff;
+    background-color: #50b3a2;
+    border-color: #50b3a2;
+}
+
+.debug-container a.btn.btn-primary.mt-3 {
+    color: #fff;
+    background-color: #50b3a2;
+    border-color: #50b3a2;
+}
+
+.quick-col h5.card-title {
+    text-align: center;
+    color: #333333;
+}
+
+.quick-col h2{
+    margin-bottom: 20px;
+}
+.quick-col .card{
+    max-height: 290px;
+}
+
+@media screen and (max-width: 768px) {
+    .btn-col button.btn.btn-primary {
+        color: #fff;
+        background-color: #50b3a2;
+        border-color: #50b3a2;
+        margin-bottom: 30px;
+    }
+    .quick-col h2{
+        margin-bottom: 20px;
+    }
+    .quick-col .card {
+        width: 50%;
+        align-items: center;
+        margin: auto;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .debug-container
+    .row.projectrow {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .btn-col button.btn.btn-primary {
+        color: #fff;
+        background-color: #50b3a2;
+        border-color: #50b3a2;
+        margin-bottom: 30px;
+    }
+    .quick-col h2{
+        margin-bottom: 20px;
+    }
+    .quick-col .card {
+        width: 100%;
+        align-items: center;
+    }
+}
+
+
+
+
 
 /** custom css end */
